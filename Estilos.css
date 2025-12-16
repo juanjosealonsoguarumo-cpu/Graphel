@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    --color-oscuro-principal: #35424a;
+    --color-acento: #3498db; 
+    --color-texto: #333333;
+    --color-fondo: #f4f4f4;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--color-fondo);
+    color: var(--color-texto); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 0 0 20px 0;
+}
+
+.contenedor {
+    width: 90%; 
+    margin: auto; 
+    overflow: hidden; 
+    padding: 0 10px;
+}
+
+a {
+    color: var(--color-texto);
+    text-decoration: none; 
+}
+
+.boton-principal {
+    height: 38px;
+    background: var(--color-acento);
+    border: 0;
+    padding: 0 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+header {
+    background: var(--color-oscuro-principal); 
+    color: #ffffff; 
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: var(--color-acento) 3px solid; 
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header h1 .resaltado {
+    color: var(--color-acento);
+}
+
+header nav ul {
+    list-style: none; 
+    padding: 0;
+    text-transform: uppercase;
+}
+
+header nav ul li {
+    display: block;
+    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header a {
+    color: #ffffff;
+}
+
+header nav a:hover,
+header nav li.actual a { 
+    color: var(--color-acento); 
+}
+
+#boletin {
+    padding: 15px 0;
+    color: #ffffff;
+    background: var(--color-oscuro-principal); 
+    margin-top: 0;
+}
+
+#boletin .contenedor {
+    display: block;
+}
+
+#boletin h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#boletin form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#boletin input[type="email"] {
+    padding: 10px;
+    height: 38px;
+    width: 100%;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: var(--color-acento); 
+    text-align: center;
+}
+
+#cabecera-principal {
+    min-height: 300px;
+    background: url('../images/cabecera.jpg') no-repeat center center; 
+    background-size: cover; 
+    text-align: center;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 0;
+}
+
+#cabecera-principal h2 {
+    margin-top: 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#cabecera-principal p {
+    font-size: 16px;
+}
+
+#columnas .contenedor {
+    display: block;
+    padding: 20px 10px;
+}
+
+.caja {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.caja img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+#main-column {
+    width: 100%;
+    padding: 0;
+}
+
+#sidebar {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.fondo-oscuro {
+    background-color: var(--color-oscuro-principal);
+    color: #ffffff;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.lista-servicio {
+    padding: 15px;
+    border: #cccccc solid 1px;
+    margin-bottom: 15px;
+    background: #e6e6e6;
+}
+
+#main-column input, 
+#main-column textarea,
+#sidebar .fondo-oscuro input,
+#sidebar .fondo-oscuro textarea {
+    width: 100%;
+    padding: 10px;
+    border: #cccccc solid 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    
+    .contenedor {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    header {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    header .contenedor {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    header h1 {
+        margin-bottom: 5px;
+    }
+
+    header nav ul li {
+        display: inline;
+        padding: 0 20px 0 20px;
+        border-top: none;
+    }
+
+    #boletin .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #boletin h2 {
+        margin-bottom: 0;
+        flex-grow: 1;
+        text-align: left;
+    }
+    
+    #boletin form {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    #boletin input[type="email"] {
+        width: 250px;
+    }
+
+    .boton-principal {
+        width: auto;
+        margin-top: 0;
+    }
+
+    #cabecera-principal {
+        min-height: 450px;
+    }
+
+    #cabecera-principal h2 {
+        font-size: 55px;
+    }
+
+    #columnas .contenedor {
+        display: flex;
+        gap: 30px; 
+    }
+
+    .caja {
+        flex-grow: 1; 
+        flex-basis: 0;
+        margin-bottom: 0;
+    }
+    
+    .caja img {
+        width: 90px;
+    }
+
+    main .contenedor::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    #main-column {
+        float: left;
+        width: 65%;
+        padding: 0 10px 0 0;
+    }
+
+    #sidebar {
+        float: right;
+        width: 30%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+#cabecera-principal {
+    min-height: 350px;
+    padding: 40px 0;
+    text-align: center;
+    color: #ffffff;
+    
+    background: 
+        linear-gradient(to right, rgba(53, 66, 74, 0.7), rgba(53, 66, 74, 0.7)), 
+        url('./images/891.jpg') no-repeat center center;
+    
+    background-size: cover; 
+}
+
+
+#cabecera-principal .contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    min-height: 350px;
+}
+
+
+@media (min-width: 768px) {
+
+    #cabecera-principal {
+        min-height: 400px;
+    }
+    #cabecera-principal .contenedor {
+        min-height: 500px;
+    }
+    #cabecera-principal h2 {
+        font-size: 55px;
+    }
+
+    #cabecera-principal {
+    min-height: 350px;
+    padding: 40px 0;
+    text-align: center;
+    color: #ffffff;
+    
+    background: 
+        linear-gradient(to right, rgba(53, 66, 74, 0.7), rgba(53, 66, 74, 0.7)), 
+        url('cabecera.jpg') no-repeat center center;
+    
+    background-size: cover;
+ }
+
+}
